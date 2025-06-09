@@ -1,6 +1,10 @@
 
 # golang 介绍
 
+Go 语言通过自动垃圾回收简化内存管理，凭借独特的 Goroutines 和 Channels 提供卓越且易用的并发能力。其语法设计注重简洁高效，如函数多返回值、显式错误处理、丰富的内置类型和匿名函数/闭包提升了开发体验。类型系统通过隐式接口实现强大的抽象和多态，反射提供了运行时操作的灵活性。最后，Cgo 确保了与 C 生态的无缝集成。这些特性共同构成了 Go 语言在高性能、高并发、系统编程和云原生基础设施等领域的核心竞争力。
+
+
+
 Go语言最主要的特性：
 
 - 自动垃圾回收
@@ -17,7 +21,7 @@ Go语言最主要的特性：
 
 下载 golang 的安装包：[Go 安装包下载](https://studygolang.com/dl)
 
-如果你是 M1 之后的 Mac，下载 go1.17.6.darwin-arm64.pkg，否则下载 go1.17.6.darwin-amd64.pkg。之后双击下载的安装包，按提示一步步操作即可。
+如果你是 M1 之后的 Mac，下载 `go1.17.6.darwin-arm64.pkg`，否则下载 `go1.17.6.darwin-amd64.pkg`。之后双击下载的安装包，按提示一步步操作即可。
 
 把安装路径加到 PATH 上 (~/.bashrc)
 
@@ -53,7 +57,7 @@ export GOPRIVATE=git.mycompany.com,github.com/my/private
 - GOPATH：若干工作区目录的路径。是我们自己定义的工作空间。
 - GOBIN：golang  程序生成的可执行文件（executable file）的路径。
 
-工具环境的变量：
+go env 会出现以下的环境的变量：
 
 ```sh
 set GO111MODULE=on
@@ -68,11 +72,11 @@ set GOHOSTARCH=amd64
 set GOHOSTOS=windows
 set GOINSECURE=
 set GOMODCACHE=C:\go\pkg\mod
-set GONOPROXY=gitlab.vrviu.com
-set GONOSUMDB=gitlab.vrviu.com
+set GONOPROXY=gitlab.xxxx.com
+set GONOSUMDB=gitlab.xxxx.com
 set GOOS=windows
 set GOPATH=C:\go
-set GOPRIVATE=gitlab.vrviu.com
+set GOPRIVATE=gitlab.xxxx.com
 set GOPROXY=https://goproxy.cn,direct
 set GOROOT=C:\Program Files\Go
 set GOSUMDB=sum.golang.org
@@ -87,7 +91,7 @@ set AR=ar
 set CC=gcc
 set CXX=g++
 set CGO_ENABLED=0
-set GOMOD=c:\kane-fang\work\gitlab\cag\cag-proxy\go.mod
+set GOMOD=c:\4kkane\work\github\4kkane\programming-skills-note\go.mod
 set GOWORK=
 set CGO_CFLAGS=-O2 -g
 set CGO_CPPFLAGS=
@@ -452,6 +456,7 @@ import (
 - import 后面的是 `GOPATH` 开始的相对目路径，包括最后一段。但由于一个目录下只能有一个 package, 所以 import 一个路径就等于是 import 了这个路径下的包。
 - 如果有子目录，那么子目录和父目录是完全两个包。
   
+
 一个 package 的文件不能在多个文件夹下
 
 - 如果多个文件夹下有重名的 package ，它们是彼此无关的 package 。
