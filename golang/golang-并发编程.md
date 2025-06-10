@@ -338,6 +338,10 @@ Only once
 
 **sync.Once** 使用变量 `done` 来记录函数的执行状态，使用 `sync.Mutex` 和 `sync.atomic` 来保证线程安全的读取 `done` 。
 
+例子：[golang-code/singletion](https://github.com/4kkane/4kane-code/tree/main/golang-code/singleton)
+
+ 
+
 **源码**
 
 ```go
