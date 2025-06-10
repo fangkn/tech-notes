@@ -50,7 +50,7 @@ from : [https://www.jianshu.com/p/1eab4b981559](https://www.jianshu.com/p/1eab4b
 结果却遇到了这个问题。也看不出什么来。
 
 ```sh
-c:\kane-fang\github\golang-learning-pro\beego-chat>go run main.go
+c:\4K\github\golang-learning-pro\beego-chat>go run main.go
 C:\Users\14476\AppData\Local\Temp\go-build2617687394\b001\exe\main.exe flag redefined: graceful
 panic: C:\Users\14476\AppData\Local\Temp\go-build2617687394\b001\exe\main.exe flag redefined: graceful
 goroutine 1 [running]:
@@ -135,7 +135,7 @@ package cag-wx-proxy
 go: writing go.mod cache: mkdir c:\Program Files\Go\pkg\mod\cache: Access is denied.
 go: writing go.mod cache: mkdir c:\Program Files\Go\pkg\mod\cache: Access is denied.
 
-```
+  ```
 
 对  c:\Program Files\Go 添加当前用户的读写和执行权限
 
