@@ -1,3 +1,11 @@
+---
+tags:
+  - python
+  - linux
+create: 2024-01-09 14:24
+---
+
+
 # python 
 
 python 升级 3.7  版本
@@ -39,13 +47,13 @@ conda activate jupyter_venv
 # 退出当前虚拟环境
 conda deactivate
 # 删除某个虚拟环境
-conda remove -n your_env_name --all 
+	conda remove -n your_env_name --all 
 #复制某个虚拟环境
 conda create --name new_env_name --clone old_env_name
 # 导致环境配置到文件，要先激活环境
 conda env export > environment.yml
 # 通知配置文件创建环境
-conda env create -f environment.yml
+	conda env create -f environment.yml
 
 # 包管理
 
@@ -126,3 +134,43 @@ mv wq /export/servers/anaconda3/lib/python3.6/site-packages/
 Anaconda windows 安装
 
 conda 的使用 ： 《[如何用Conda优雅的管理Python环境](https://ckfanzhe.github.io/About_conda/)》
+
+
+## uvx 
+
+uvx：命令行工具，用于快速运行 Python 脚本。
+
+
+### 安装
+
+mac、linux 方式：
+```sh 
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# mac 
+  brew install uv
+
+uv -V
+uv 0.7.21 (77c771c7f 2025-07-14)
+
+```
+windows 
+
+```sh 
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+### 卸载
+
+如果需要从系统中移除 uv，只需删除 uv 和 uvx 二进制文件：
+
+```sh 
+$ rm $HOME\.local\bin\uv
+$ rm $HOME\.local\bin\uvx
+```
+
+### 资料
+
+1 、[https://zhuanlan.zhihu.com/p/1888904532131575259](https://zhuanlan.zhihu.com/p/1888904532131575259)
+
+2、[https://hellowac.github.io/uv-zh-cn/getting-started/installation/#shell](https://hellowac.github.io/uv-zh-cn/getting-started/installation/#shell)
