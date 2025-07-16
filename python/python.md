@@ -8,7 +8,7 @@ create: 2024-01-09 14:24
 
 # python 
 
-python 升级 3.7  版本
+python 升级 3.7 版本
 
 ```sh
 wget https://www.python.org/ftp/python/3.7.9/Python-3.7.9.tgz
@@ -23,13 +23,40 @@ ln -s /usr/local/src/python37/bin/python3.7 /usr/bin/python3.7
 ln -s /usr/local/src/python37/bin/pip3.7 /usr/bin/pip3.7
 ```
 
-# pip 
+## pip 
 
 ```sh 
 pip3 install mycli # mysql 客户端
 ```
 
-# Anaconda
+使用时，输入pip <command> [options] 形式的指令，即可执行相应的命令，并且，command 和 options 可以任意组合
+
+```sh
+pip install --help
+pip uninstall  --help
+```
+通过使用==, >=, <=, >, < 来指定一个版本号,未指定版本号，将默认下载最新版本。
+```sh 
+pip install SomePackage              # 最新版本
+pip install SomePackage==1.0.4       # 指定版本
+pip install 'SomePackage>=1.0.4'     # 最小版本
+
+```
+指定 requirements.txt 文件
+
+```sh
+pip install -r requirements.txt
+```
+
+freeze 用于输出已安装的软件包，并以 requirements 文件的格式显示.
+
+```sh 
+
+pip freeze > requirements.txt
+
+```
+
+## Anaconda
 
 下载  ： https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
 
@@ -139,7 +166,6 @@ conda 的使用 ： 《[如何用Conda优雅的管理Python环境](https://ckfan
 ## uvx 
 
 uvx：命令行工具，用于快速运行 Python 脚本。
-
 
 ### 安装
 
