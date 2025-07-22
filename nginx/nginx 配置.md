@@ -1,3 +1,6 @@
+---
+create: 2025-09-21 14:24
+---
 # nginx 配置  ssl
 
 在 server 中配置 ssl
