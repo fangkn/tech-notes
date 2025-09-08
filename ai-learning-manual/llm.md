@@ -10,7 +10,7 @@
 
 [白话大语言模型(LLM)原理系列（二）——模型是如何被训练的？](https://zhuanlan.zhihu.com/p/1892531873110013681)
 
-[白话大语言模型(LLM)原理系列（三）——模型如何生成语言] (https://zhuanlan.zhihu.com/p/1895580588867557052)
+[白话大语言模型(LLM)原理系列（三）——模型如何生成语言](https://zhuanlan.zhihu.com/p/1895580588867557052)
 
 [白话大语言模型(LLM)原理系列（四）——嵌入（Embeddings）](https://zhuanlan.zhihu.com/p/1898056705251742950)
 
