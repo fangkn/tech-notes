@@ -233,9 +233,39 @@ module moduledemo
 go 1.14
 
 require "mypackage" v0.0.0
-replace "mypackage" => "../mypackage"
+replace "" => "../kgo-public"
 
 ```
+
+
+## 包的域名失效
+
+天编译一份代码时发现有一个包的无法下载到本地，错误如下： 
+
+```sh 
+	go.pedge.io/lion@v0.0.0-20190619200210-304b2f426641: unrecognized import path "go.pedge.io/lion": https fetch: Get "https://go.pedge.io/lion?go-get=1": dial tcp: lookup go.pedge.io: no such host
+```
+估计是年久失修，被删除了。我到github  找了一圈，没有找到对应的。想想只能把同事本地的 拷贝过来了，发现还不行。
+重新思考一下，如果这个包不维护了，链接要失效掉，那么也应该放到  github 上。而不是这样直接不可以用。所以问题应该不在这里，那么可能就是我访问出了问题。
+
+检测了一下 golang 的环境变量，发现代理是：
+
+```sh 
+GOPROXY='https://proxy.golang.com.cn,direct'
+```
+
+不清楚这个是否有问题，偿试改一下。 
+
+```sh 
+export GOPROXY=https://goproxy.io,direct # 还是不行
+export GOPROXY=https://proxy.golang.org,direct # 可以了
+
+```
+
+就是 GOPROXY  的地址多了一个 cn 导致访问  `go.pedge.io` 有问题。 
+
+（2025-09030记录）
+
 
 ## vscode golang
 
